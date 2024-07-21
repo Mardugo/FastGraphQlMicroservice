@@ -1,0 +1,11 @@
+version: '3.10'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - DATABASE_URL=sqlite:///./carrito_compras.db
